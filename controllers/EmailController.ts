@@ -25,7 +25,7 @@ export const sendEmail = (
     const dashedTitle = post_title.replace(/\s+/g, "-");
     // prepare msg
     const msg = {
-      to: toEmail,
+      to: 'waqasshahh13@gmail.com', //toEmail,
       //cc:"nauman12002@gmail.com",
       from: {
         email: "waqasshahh13@gmail.com",
