@@ -38,7 +38,7 @@ export const sendEmail = (
         authorName: author_name,
         publishDate: publish_date,
         toEmailLO: toEmail,
-        // approeLink: isBranch
+        // approeLink: isBranchh
         //   ? `https://${website_url}/wp-json/connectexpress/v1/postblog?title=${dashedTitle}`
         //   : `https://affiliatedsd.com/wp-json/connectexpress/v1/postblog?title=${dashedTitle}`,
         approveLink: `${website_url}/wp-json/connectexpress/v1/postblog?title=${dashedTitle}`,
