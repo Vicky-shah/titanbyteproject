@@ -105,7 +105,8 @@ export const sendEmailForActivityApprovalToAuthor = (
   activity_image: string,
   activity_type: string,
   publish_date:string,
-  authorName : string
+  authorName : string,
+  guid: string
 ) => {
   return new Promise<any>((resolve, reject) => {
     // replace spaces with dashes so its easier to pass as query param
@@ -129,6 +130,7 @@ export const sendEmailForActivityApprovalToAuthor = (
         activityDesc: activity_description,
         publishDate:publish_date,
         authorName:authorName,
+        guid:guid,
         approveLink: `https://affiliatedsd.com/wp-json/connectexpress/v1/approveActivity?post_id=${post_id}`,
         declinePostLink: `https://affiliatedsd.com/decline-comment/?declined-post-title=${dashedTitle}`,
       },
