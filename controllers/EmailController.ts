@@ -100,13 +100,12 @@ export const sendEmailForActivityApprovalToAuthor = (
   author_email: string,
   post_title: string,
   post_id: number,
-  post_url: string,
+  guid: string,
   activity_description: string,
   activity_image: string,
   activity_type: string,
   publish_date:string,
-  authorName : string,
-  guid: string
+  authorName : string
 ) => {
   return new Promise<any>((resolve, reject) => {
     // replace spaces with dashes so its easier to pass as query param
@@ -123,7 +122,7 @@ export const sendEmailForActivityApprovalToAuthor = (
       templateId: SEND_GRID_ACTIVITY_APPROVAL_TEMPLATE_ID,
       dynamic_template_data: {
         postTitle: post_title,
-        postLink: post_url,
+        postLink: guid,
         authorEmail: author_email,
         activityImage: activity_image,
         activityType: activity_type,
